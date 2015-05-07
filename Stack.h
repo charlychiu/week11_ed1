@@ -27,7 +27,6 @@ class MyStack {
     bool operator<=(const MyStack& stk);
     void show();
 };
-
 template <typename T>
 void MyStack<T>::pop() {
     if ( top <= 0) return;
