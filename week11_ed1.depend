@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1431012233 source:/Users/charlychiu/Desktop/c++code/week11_ed1/main.cpp
+1431013718 source:/Users/charlychiu/Desktop/c++code/week11_ed1/main.cpp
 	<iostream>
 	<iomanip>
 	"Stack.h"
 
-1431012592 /Users/charlychiu/Desktop/c++code/week11_ed1/Stack.h
+1431014289 /Users/charlychiu/Desktop/c++code/week11_ed1/Stack.h
 

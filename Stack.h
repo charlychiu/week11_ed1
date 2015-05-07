@@ -4,10 +4,15 @@
 template <typename T>
 class MyStack {
   private: // information(data) hidding(encapsulation)
-    T* aDisk;
+    int aDisk;
     int  capacity;
     int  top;
     char name;
+     T* x;
+    int i;
+    int left;
+    int right;
+    int l;
   public: // interface: public method(member function)
     void pop();
     void push(T e);
@@ -58,9 +63,11 @@ int MyStack<T>::size() {
 }
 template <typename T>
 MyStack<T>::MyStack() {
-    aDisk = NULL;
-    top = -1;
-    capacity = 0;
+    x = NULL;
+    i = 0;
+    left = 0;
+    right = 0;
+    strlen(x);
 }
 template <typename T>
 MyStack<T>::MyStack (int n) {
@@ -80,7 +87,7 @@ void MyStack<T>::init(int n) {
 
 template <typename T>
 MyStack<T>::~MyStack() {
-     delete [] aDisk;
+     delete []x;
 }
 template <typename T>
 MyStack<T>::MyStack(const MyStack& stk) {
@@ -140,9 +147,17 @@ bool MyStack<T>::operator<=(const MyStack& stk){
 }
 template <typename T>
 void MyStack<T>::show() {
-     cout << "capacity" << capacity << endl;
-     for ( int i=0; i<=top; ++i )
-         { cout << "[" << aDisk[i] << "]";
-         }
+     T x[999];
+	cin >> x;
+	int l=strlen(x);
+	for(int i=0;i<l;i++) {
+		if(x[i]=='(') left++;
+		else if(!left) {
+			cout << "wrong" << endl;
+			return;
+		}
+		else left--;;
+	}
+		cout << (!left? "same value":"wrong edition") << endl;
 }
 #endif // STACK_H_INCLUDED
